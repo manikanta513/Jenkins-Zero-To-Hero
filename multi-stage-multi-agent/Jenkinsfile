@@ -14,10 +14,5 @@ pipeline {
         }
       }
     }
-#    stage('Run Docker Image') {
-#      steps {
-#        sh 'docker run manikanta-test-java'
-#      }
-#    }
-#  }
+  }
 }
