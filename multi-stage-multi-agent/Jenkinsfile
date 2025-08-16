@@ -1,6 +1,11 @@
 pipeline {
   agent any
   stages {
+    stage('git fetch') {
+      steps {
+        sh 'https://github.com/manikanta513/Jenkins-Zero-To-Hero.git'
+      }
+    }
     stage('Build Docker Image') {
       steps {
         sh 'docker build -t manikanta-test-java .'
