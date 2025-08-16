@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('git checkout') {
       steps {
-        git branch: 'main', url: 'https://github.com/manikanta513/Jenkins-Zero-To-Hero.git'
+        git branch: 'manikanta513-patch-1', url: 'https://github.com/manikanta513/Jenkins-Zero-To-Hero.git'
       }
     }
     stage('Build Docker Image') {
