@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('git fetch') {
+    stage('git checkout') {
       steps {
         sh 'https://github.com/manikanta513/Jenkins-Zero-To-Hero.git'
       }
