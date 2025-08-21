@@ -50,9 +50,10 @@ pipeline {
             steps {
                 script{
                     dir('python-jenkins-argocd-k8s/deploy'){
+                        def tag = env.BUILD_NUMBER
                         sh '''
                         cat deploy.yaml
-                        sed -i '19s|.*|        image: manikanta513/cicd-argocd:${BUILD_NUMBER}|' deploy.yaml
+                        sed -i '19s|.*|        image: manikanta513/cicd-argocd:${tag}|' deploy.yaml
                         cat deploy.yaml
                         git config user.email "manikanta513@gmail.com"
                         git config user.name "manikanta513"
