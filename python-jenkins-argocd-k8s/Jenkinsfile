@@ -6,6 +6,10 @@
             args '-v /var/run/docker.sock:/var/run/docker.sock --user root'
             reuseNode true
         }
+        steps {
+          git branch: 'main',
+              url: 'https://github.com/manikanta513/Jenkins-Zero-To-Hero.git'
+        }
     }
     
     environment {
