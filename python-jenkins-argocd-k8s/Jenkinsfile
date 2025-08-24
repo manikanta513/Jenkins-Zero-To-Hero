@@ -1,4 +1,4 @@
- qpipeline {
+ pipeline {
     
     agent {
         docker {
