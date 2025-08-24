@@ -49,7 +49,12 @@
                 }
             }
         }
-        
+        stage('Checkout in docker container'){
+          steps { 
+            url: 'https://github.com/manikanta513/Jenkins-Zero-To-Hero',
+            branch: 'main'
+          }
+        }
         
         stage('Update K8S manifest'){
             steps {
